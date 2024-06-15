@@ -1,6 +1,6 @@
 import React from "react";
 
-const ToDoHero = (todo_completed, total_todos) => {
+const ToDoHero = ({ todo_completed, total_todos }) => {
   return (
     <section>
       <div>
