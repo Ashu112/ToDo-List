@@ -1,9 +1,14 @@
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 
-const Form = () => {
+const Form = ({ setTodos }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
+    const value = event.target.todo.value;
+    setTodos((prevTodos) => [
+      ...prevTodos,
+      { title: value, id: Math.random(), is_completed: false },
+    ]);
     //reset the form
     event.target.reset();
   };

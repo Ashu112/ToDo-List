@@ -6,15 +6,7 @@ import Form from "./Components/Form";
 import { useState } from "react";
 
 function App() {
-  const [todos, setTodos] = useState([
-    { title: "Some task", id: 1, is_completed: false },
-    {
-      title: "Some other task",
-      id: 2,
-      is_completed: true,
-    },
-    { title: "last task", id: 3, is_completed: false },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   const todos_completed = todos.filter(
     (todo) => todo.is_completed === true
@@ -29,7 +21,7 @@ function App() {
         todo_completed={todos_completed}
         total_todos={total_completed}
       />
-      <Form />
+      <Form setTodos={setTodos} />
       <ToDoList todos={todos} setTodos={setTodos} />
     </div>
   );
