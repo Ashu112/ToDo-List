@@ -15,12 +15,22 @@ function App() {
     },
     { title: "last task", id: 3, is_completed: false },
   ]);
+
+  const todos_completed = todos.filter(
+    (todo) => todo.is_completed === true
+  ).length;
+
+  const total_completed = todos.length;
+
   return (
     <div className="wrapper">
       <Header />
-      <ToDoHero todo_completed={0} total_todos={0} />
+      <ToDoHero
+        todo_completed={todos_completed}
+        total_todos={total_completed}
+      />
       <Form />
-      <ToDoList todos={todos} />
+      <ToDoList todos={todos} setTodos={setTodos} />
     </div>
   );
 }

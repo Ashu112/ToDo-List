@@ -2,12 +2,9 @@ import React from "react";
 
 const Header = () => {
   return (
-    <>
-      <svg>
-        <path d="" />
-      </svg>
+    <div className="header-container">
       <h1>ToDo</h1>
-    </>
+    </div>
   );
 };
 

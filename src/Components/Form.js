@@ -1,4 +1,5 @@
 import React from "react";
+import AddIcon from "@mui/icons-material/Add";
 
 const Form = () => {
   const handleSubmit = (event) => {
@@ -18,10 +19,9 @@ const Form = () => {
         />
       </label>
       <button>
-        <span className="visually-hidden">Submit</span>
-        <svg>
-          <path d="" />
-        </svg>
+        <span className="visually-hidden ">
+          <AddIcon />
+        </span>
       </button>
     </form>
   );
